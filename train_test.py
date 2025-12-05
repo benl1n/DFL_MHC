@@ -214,8 +214,8 @@ def main():
                     device,
                     save_path)
 
-        # test
-        model.load_state_dict(torch.load(save_path))
+
+
 
         if best_f1 > global_best_f1:
             global_best_f1 = best_f1
@@ -223,6 +223,8 @@ def main():
 
     print(f"Train Result: ACC:{round(statistics.mean(all_train_acc), 4)}, SN:{round(statistics.mean(all_train_sn), 4)},"
           f"SP:{round(statistics.mean(all_train_sp), 4)}, MCC:{round(statistics.mean(all_train_mcc), 4)}")
+
+    # test
 
     final_model = DFL_MHC().to(device)
     final_model.load_state_dict(torch.load(global_best_model_path))
