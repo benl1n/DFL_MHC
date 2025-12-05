@@ -10,10 +10,6 @@ import torch
 import random
 import os
 
-# reproducibility
-manualSeed = 2
-random.seed(manualSeed)
-torch.manual_seed(manualSeed)
 
 def main():
     save_dir = "./pca_data"
@@ -69,7 +65,7 @@ def main():
     acc = round(accuracy_score(y_test, y_pred), 4)
     mcc = round(matthews_corrcoef(y_test, y_pred), 4)
 
-    print(f"Hold-out Test Accuracy: {acc}, MCC: {mcc}")
+    print(f"Test Accuracy: {acc}")
 
 if __name__ == "__main__":
     main()

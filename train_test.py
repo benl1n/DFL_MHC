@@ -170,7 +170,6 @@ def main():
     for fold, (train_split_idx, val_split_idx) in enumerate(skf.split(X_train, y_train)):
         print(f"\n=== Fold {fold} ===")
 
-        # ✅ 构建 Tensor
         X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
         y_train_tensor = torch.tensor(y_train, dtype=torch.long)
 
