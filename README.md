@@ -49,11 +49,11 @@ python process_features.py
 
 4. get the final prediction results of MHC:
 
+The PCA-processed features have been pre-saved in the `pca_fold_data/` . You can directly execute the following script:
+
 ```
 python train_test.py
 ```
-
-
 
 
 
